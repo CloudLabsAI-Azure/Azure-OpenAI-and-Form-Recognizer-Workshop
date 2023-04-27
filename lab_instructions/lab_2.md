@@ -1,6 +1,7 @@
 # Create and Deploy a Form Recognizer Custom Model
 
 ### Overview
+
 In this lab, you will create (train) an Azure Form Recognizer custom model using a sample training dataset. Custom models extract and analyze distinct data and use cases from forms and documents specific to your business. To create a custom model, you label a dataset of documents with the values you want extracted and train the model on the labeled dataset. You only need five examples of the same form or document type to get started. For this lab, you will use the dataset provided at [Custom Model Sample Files](/SampleInvoices/SampleInvoices/Custom%20Model%20Sample).
 
 
@@ -27,6 +28,7 @@ In this lab, you will create (train) an Azure Form Recognizer custom model using
 - [Step 5 - Test the Model on Test Data](#step-5---test-the-model-on-test-data)   
 
 #### Step 1 - Create a Form Recognizer Resource  
+
 ![](images/step1a-create-form-rec-resource.png)  
 ![](images/step1b-create-form-rec-resource.png)  
 ![](images/step1c-create-form-rec-resource.png)  
@@ -51,6 +53,7 @@ Provide the storage account and container containing the forms data which you wi
 ![](images/step2g-Create-custom-labeling-project.png)  
 
 #### Step 3 - Import the Sample Data  
+
 Use the data folder on VM desktop and go to **Custom Model Sample Files** and pick 5 files marked as **train**
 ![](images/step3a-import-sample-data.png)  
 ![](images/step3b-import-sample-data.png)  
@@ -66,11 +69,15 @@ Apply the custom label to form fields
 ![](images/step3e-import-sample-data.png)  
 Apply the labels to all forms by repeating the process in the previous step  
 ![](images/step3f-import-sample-data.png)  
+
 #### Step 4 - Train the model 
+
 After labeling the forms, click on "Train" and provide the below information. Please note **Neural** method will take a longer duration to train but may be necessary in case of most unstructured files. If your data is mostly structured, you can use **Tabular** to make the training faster. For this workshop, we will use Tabular method to train the model.
 ![](images/step4a-train-the-model.png)  
 ![](images/step4b-train-the-model.png)  
+
 #### Step 5 - Test the Model on Test Data
+
 Use the sample files marked as **test** from the same location where you picked the files for training
 ![](images/step5a-test-the-model.png)  
 ![](images/step5b-test-the-model.png)  
@@ -81,9 +88,11 @@ The results are projected with the confidence score
 
 
 #### Build new pipeline with custom model module in BPA  
+
 After you are sastified with the custom model performance, you can retrieve the **model ID** and use it in a new BPA pipeline with the Cusom Model module in the next step.
 
 #### Launch BPA Accelerator 
+
 1. Launch the accelerator from the resource group in the Static Web App
    1. To do this go to portal.azure.com ([Azure Portal](portal.azure.com)) from a web browser and click on resource group that is created for the purpose of this lab.
    ![resourcegroup.png](/images/resourcegroup.png)
@@ -98,7 +107,7 @@ After you are sastified with the custom model performance, you can retrieve the 
     ![staticwebappresource.png](../images/staticwebappresource.png)
 
     Click on the URL and this will launch the accelerator
-    ![swaurl.png](/images/swaurl.png)
+    ![swaurl.png](../images/swaurl.png)
 
 1. Please create the following pipeline:
 ![](images/step6a-deploy-custom-model.png) 
@@ -118,22 +127,24 @@ After you are sastified with the custom model performance, you can retrieve the 
 
 1. To get the **Search Service**. To view the results, go to portal.azure.com ([Azure Portal](portal.azure.com)) again in your browser and get to the resource group like we did earlier in Step 1. There, in the resource group, click on the resource that is of type **Search Service**. 
     
-    ![searchservicetype.png](/images/searchservicetype.png)
+    ![searchservicetype.png](../images/searchservicetype.png)
 
 1. Click on **Import Data** and Select **Azure Blob Storage** from the dropdown in datasource.
-    ![selectblobstorage.png](/images/selectblobstorage.png)
+    ![selectblobstorage.png](../images/selectblobstorage.png)
+
 1. Provide a name for datasource; change the parsing mode to **Default**; click on **Choose an existing connection**  for **Connection String** and select the Storage account related to your project and choose container **document**
+    
     ![selectcontainer.png](/images/selectcontainer.png)
 
 1. Keep the default for **Managed identity Authentication**, which is **None**.  
 
-1. On the Blob folder, provide the name of **your pipeline**
+1. On the Blob folder, provide the name of **your pipeline**.
     
     ![selectcontainerfolder.png](/images/selectcontainerfolder.png)
 
 1. Click **Next: Add cognitive skills (Optional)**. This validates and creates the index schema. 
 
-1. In the next Screen(**Add cognitive skills (Optional)**), Click **Skip to: Customize Target Index**, 
+1. In the next Screen(**Add cognitive skills (Optional)**), Click **Skip to: Customize Target Index**. 
       ![customizetargetindex.png](/images/customizetargetindex.png)
 
 1. Make all fields **Retrievable** and **Searchable**
@@ -155,6 +166,7 @@ After you are sastified with the custom model performance, you can retrieve the 
      ![searchlandingpage.png](/images/searchlandingpage.png)
 
 1. You can now filter and search on items and other fields configured.
+
 ## More Resources  
 Getting Started with Form Recognizer Studio - https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/form-recognizer-studio-overview?view=form-recog-3.0.0  
 Form Recognizer Documentation - https://learn.microsoft.com/en-us/azure/applied-ai-services/form-recognizer/concept-invoice?view=form-recog-3.0.0
