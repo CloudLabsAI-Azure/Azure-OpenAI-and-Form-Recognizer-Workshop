@@ -112,7 +112,7 @@ In this lab, you will create a pipeline with the Business Process Automation Acc
     ![deleteinvoice.png](/images/deleteinvoice.png)
 
 1. Make all fields **Retrievable** and **Searchable**
-    ![Retrievable.png](/images/Retrievable.png)
+    ![Retrievable.png](../images/retrievable.png)
 
 1. Under **aggregatedResults**-> **simplifyInvoice** Select, customerName, invoiceId, invoicedate and dueDate to be filterable and sortable
     ![simplifyinvoicefiltersort.png](/images/simplifyinvoicefiltersort.png)
