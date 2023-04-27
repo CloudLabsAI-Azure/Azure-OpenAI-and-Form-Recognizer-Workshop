@@ -42,19 +42,23 @@ There are 2 options for ingesting the data for the pipeline:
 1. Click on **Import Data**. 
     ![selectimportdata.png](../images/selectimportdata.png)
 
-1. Select **Azure Cosmos DB** from the dropdown in datasource.
-    ![selectazurecosmosdb.png](../images/selectazurecosmosdb.png)
+1. Select **Azure Blob Storage** from the dropdown in datasource.
 
-1. Provide a name for datasource and click on **Choose an existing connection**  for **Connection String**. Here the Azure CosmosDB resource created as a part of BPA accelerator already setup will be one of the sources you can choose from.
-    ![selectcosmosdb.png](../images/selectcosmosdb.png)
+1. Provide a name for datasource and click on **Choose an existing connection**  for **Connection String**. Here the Azure Blob Storage resource created as a part of BPA accelerator already setup will be one of the sources you can choose from.
+    ![lab3-import-data-1.png](images/lab3-import-data-1.png)
 
+1. After you select your storage account, select the **results** container from the list and click **Select** button. See the screen shot below.
+    ![lab3-import-data-2.png](images/lab3-import-data-2.png)
 
-1. Keep the default for **Managed identity Authentication**, which is **None**. For **Databases** and **Collection** use the dropdown to select the same name as the Cosmos DB you selected at step 15. 
+1. On the Import data screen make sure you have the following:
+    - Your data source as **Azure Blob Storage**
+    - You have provided data source name. For e.g. **storagedatasource**
+    - You selected **JSON** as Parsing mode
+    - Your container name is **results** and 
+    - Your created pipeline name is entered. For instance, if your pipeline name is **pipeline-name** then enter pipeline-name
+    - Keep the default for **Managed identity Authentication**, which is **None** 
 
-1. Under Query, use the following Query.  The pipeline should match the pipeline name you used in step 3
-    > SELECT * FROM c WHERE c.pipeline = 'YOUR-PIPELINE-NAME' AND c._ts > @HighWaterMark
-
-    ![](images/Lab3LoadData.png)
+   ![lab3-import-data-3.png](images/lab3-import-data-3.png)
 
 
 1. Click **Next: Add cognitive skills (Optional)**. This validates and creates the index schema. 
@@ -75,24 +79,39 @@ There are 2 options for ingesting the data for the pipeline:
 #### **Step 4 - Configure Semantic Search**
 
 1. You can select Semantic Search Plan
-![](images/Lab3SemSearchPlan.png) 
+    ![](../images/Lab3SemSearchPlan.png) 
 
 1. Go back to your search index and configure the Semantic Configuration
-![](images/Lab3SearchIndex.png)
+    ![](../images/Lab3SearchIndex.png)
 
 1. Select the Semantic Configuration and click on Create new. 
 
     On the pop up do the following:
-    - Give a name to the Semantic Search Config
+    - Give a name to the Semantic Search Config. **For this lab, the name must be 'default'**
     - Select the Title field and select 'filename'
     - Select the 'content' field and any other relevant fields for Content Fields
     - Select Save
 
-![](images/Lab3SemSearchConfig.png)
+    ![](../images/Lab3SemSearchConfig_default.png)
+It is important that you name your Semantic Search Config for this lab as **default**
+    
+    ![](../images/lab3-semantic-config-save.png)
 
-![](images/Lab3SemSearchConfigSave.png)
+Do not forget to click on **save** again on the index screen. Otherwise the Semantic Search Config will not be applied.
 
-#### **Step 5 - Perform Semantic Search**
+#### **Step 5 - Perform Azure OpenAI Search**
+
+1. Now, go back to the accelerator url that you retreived from Step 1 and click on **Search Application**.  
+    
+    ![BPAHomepageSampleSearch](../images/BPAHomePageSearchApp.png)
+    
+    This opens the Azure Open AI search application
+    - Select the index from top drop down. In this case the index created earlier is selected. **azureblob-index**
+    - Provide a search query based on your document, like:
+        - 'Tell me the 7454 installation instructions'
+     ![Lab5-openai-search](../images/Lab5-openai-search.png)
+     
+#### **Step 6 - Perform Semantic Search**
 1. Now, go back to the accelerator url that you retreived from Step 1 and click on **Sample Search Application**.  
     ![](images/BPAHomepageSSA.png)
 
@@ -105,7 +124,6 @@ There are 2 options for ingesting the data for the pipeline:
         - 'What is RMA?'
         - 'What are the Cleaning instructions?'
      ![](images/BPASSASearchResults.png)
-
 
 
 
