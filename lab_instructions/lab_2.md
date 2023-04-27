@@ -91,11 +91,11 @@ After you are sastified with the custom model performance, you can retrieve the 
     
     > **Note :** The names will be different in your specific labs and will not exactly match with the names of the resources or resource group
 
-    ![resourceswithinresourcegroup.png](/images/resourceswithinresourcegroup.png)
+    ![resourceswithinresourcegroup.png](../images/resourceswithinresourcegroup.png)
 
     1. Look for the Static Web App under **type**. This is what we will use as a part of lab 1. Click on the Web App.
     
-    ![staticwebappresource.png](/images/staticwebappresource.png)
+    ![staticwebappresource.png](../images/staticwebappresource.png)
 
     Click on the URL and this will launch the accelerator
     ![swaurl.png](/images/swaurl.png)
