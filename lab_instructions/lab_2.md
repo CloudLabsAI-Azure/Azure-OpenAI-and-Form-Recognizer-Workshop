@@ -140,30 +140,30 @@ After you are sastified with the custom model performance, you can retrieve the 
 
 1. On the Blob folder, provide the name of **your pipeline**.
     
-    ![selectcontainerfolder.png](/images/selectcontainerfolder.png)
+    ![selectcontainerfolder.png](../images/selectcontainerfolder.png)
 
 1. Click **Next: Add cognitive skills (Optional)**. This validates and creates the index schema. 
 
 1. In the next Screen(**Add cognitive skills (Optional)**), Click **Skip to: Customize Target Index**. 
-      ![customizetargetindex.png](/images/customizetargetindex.png)
+      ![customizetargetindex.png](../images/customizetargetindex.png)
 
 1. Make all fields **Retrievable** and **Searchable**
     ![searchconfig.png](/images/searchconfig.png)
 
 1. Provide a name for the Index and click on **Next: Create an indexer**
-    ![indexname.png](/images/indexname.png)
+    ![indexname.png](../images/indexname.png)
 
 1. Provide a name for the indexer and click **Submit**
     
-    ![createindexer.png](/images/createindexer.png)
+    ![createindexer.png](../images/createindexer.png)
 
 1. You will get a notification that the import is successfully configured
 
 1. Now, go back to the accelerator url that you retreived from Step 1 and click on **Sample Search Application**.  
-    ![samplesearchapplication.png](/images/samplesearchapplication.png)
+    ![samplesearchapplication.png](../images/samplesearchapplication.png)
 
     This opens the same search application
-     ![searchlandingpage.png](/images/searchlandingpage.png)
+     ![searchlandingpage.png](../images/searchlandingpage.png)
 
 1. You can now filter and search on items and other fields configured.
 
