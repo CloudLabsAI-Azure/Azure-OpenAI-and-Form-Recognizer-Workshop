@@ -1,0 +1,24 @@
+[
+    {
+      "Name": "Business Process Automation",
+      "Language": "English",
+      "BaseURL": "https://github.com/CloudLabsAI-Azure/Azure-OpenAI-and-Form-Recognizer-Workshop",
+      "Files": [
+                
+        {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-OpenAI-and-Form-Recognizer-Workshop/main/lab_instructions/lab_1.md",
+          "Order": 1
+        },
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-OpenAI-and-Form-Recognizer-Workshop/main/lab_instructions/lab_2.md",
+          "Order": 2
+        },
+        
+          {
+          "RawFilePath": "https://raw.githubusercontent.com/CloudLabsAI-Azure/Azure-OpenAI-and-Form-Recognizer-Workshop/main/lab_instructions/lab_3.md",
+          "Order": 3
+        }
+        
+      ]
+    }
+  ]
