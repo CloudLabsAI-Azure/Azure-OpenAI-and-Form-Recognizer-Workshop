@@ -37,16 +37,16 @@ There are 2 options for ingesting the data for the pipeline:
 #### **Step 3 - Configure Search**
 1. The get to **Search Service**. To view the results, go to portal.azure.com ([Azure Portal](portal.azure.com)) again in your browser and get to the resource group like we did earlier in Step 1. There, in the resource group, click on the resource that is of type **Search Service**. 
     
-    ![searchservicetype.png](/images/searchservicetype.png)
+    ![searchservicetype.png](../images/searchservicetype.png)
 
 1. Click on **Import Data**. 
-    ![selectimportdata.png](/images/selectimportdata.png)
+    ![selectimportdata.png](../images/selectimportdata.png)
 
 1. Select **Azure Cosmos DB** from the dropdown in datasource.
-    ![selectazurecosmosdb.png](/images/selectazurecosmosdb.png)
+    ![selectazurecosmosdb.png](../images/selectazurecosmosdb.png)
 
 1. Provide a name for datasource and click on **Choose an existing connection**  for **Connection String**. Here the Azure CosmosDB resource created as a part of BPA accelerator already setup will be one of the sources you can choose from.
-    ![selectcosmosdb.png](/images/selectcosmosdb.png)
+    ![selectcosmosdb.png](../images/selectcosmosdb.png)
 
 
 1. Keep the default for **Managed identity Authentication**, which is **None**. For **Databases** and **Collection** use the dropdown to select the same name as the Cosmos DB you selected at step 15. 
@@ -64,7 +64,7 @@ There are 2 options for ingesting the data for the pipeline:
 
 
 1. Provide a name for the Index and click on **Next: Create an indexer**
-    ![indexname.png](/images/indexname.png)
+    ![indexname.png](../images/indexname.png)
 
 1. Provide a name for the indexer and click **Submit**
     
